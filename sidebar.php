@@ -10,7 +10,7 @@
 ?>
 
 <strong>Welcome</strong><br />
-<a href="<?php site_url(); ?>">Introduction</a><br />
+<a href="<?php site_url( '/' ); ?>">Introduction</a><br />
 <a href="<?php echo site_url( '/#mission' ); ?>">Mission</a><br />
 <a href="<?php echo site_url( '/#vision/' ); ?>">Vision</a><br /><br />
 
