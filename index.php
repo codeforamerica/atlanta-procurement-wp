@@ -15,24 +15,33 @@
           lang: en_US
       /* ]]> */
       </script>
+
       <!-- THIS IS WHERE THE WORDPRESS CODE TO INCLUDE CONTENT GOES...! -->
+      <?php
+        if ( is_page( 'Home' ) ) {
+          get_template_part( 'latest-solicitations', get_post_format() );
+        }
+      ?>
+
+
       <?php
           if(have_posts()) :
             while(have_posts()) :
       ?>
       <p>
         <?php
-            the_post();
-              the_content();
-                edit_post_link( 'Edit this post ', '', '' );
-            endwhile;
-        ?>
-        <br />
+            the_post(); ?>
+
+          <div class="alert alert-info">
+            <?php edit_post_link( 'Edit this page ', '', '' ); ?> &middot; <a href="<?php _e(get_delete_post_link()); ?>">Delete this page</a>
+          </div>
+
         <?php
+            the_content();
+            endwhile;
           endif;
         ?>
       </div>
     </div>
   </div>
 
-<?php get_footer();
