@@ -30,7 +30,7 @@
         $.getJSON(dept_url, function(data) {
           var solicitations = data.posts;
           if(solicitations.length > 0) {
-            $('#project-solicitations').empty().append($('<option></option').attr("value", "blank"));
+            $('#project-solicitations').empty().append($('<option></option>').attr("value", "blank"));
             $.each(solicitations, function(key, value) {
               $('#project-solicitations')
                 .append($('<option></option>')
