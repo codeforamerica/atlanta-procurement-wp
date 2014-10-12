@@ -52,6 +52,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
     <![endif]-->
     <?php wp_head(); ?>
+    <meta name="google-translate-customization" content="6e893a189cdd2fbd-996818ac49bf8871-g987d7e6bfd01cc32-d"></meta>
   </head>
   <body <?php body_class(); ?>>
     <header class="site-header">

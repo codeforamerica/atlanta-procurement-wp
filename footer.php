@@ -51,6 +51,13 @@
         <p class="text">Our mission is to model best practices in public purchasing while promoting equity, fairness and economic inclusion.</p>
         <p class="text"><a href="http://codeforamerica.github.io/atlanta-procurement-www/rss">Get RSS updates on bid opportunities.</a>
         <p class="text"><a href="<?php echo site_url( '/supplier-registration/' ); ?>">Become a supplier</a> for the City of Atlanta.</p>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+          }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       </div>
     </div>
   </div>
