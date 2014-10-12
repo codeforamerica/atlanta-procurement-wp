@@ -29,6 +29,6 @@ get_header(); ?>
     </div>
   </div>
 
-<?php
+<?php _e(do_shortcode('[google-translator]'));
 
 get_footer();
