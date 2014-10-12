@@ -1,5 +1,6 @@
 <!-- Build a dropdown box with all of the solicitations ... -->
 <script type="text/javascript">
+  /* <![CDATA[ */
   $(function() {
     $('#project-solicitations').change(function() {
       if($(this).val() != 'blank') {
@@ -48,6 +49,7 @@
       } else if($(this).val() == 'blank') { $('#project-info-well,#project-solicitations,#solicitation-label').fadeOut(); }
     });
   });
+  /* ]]> */
 </script>
 <p>
 <strong><label for="plan_holder[department]">1. Choose a department to get started</label></strong><br /><br />
