@@ -23,8 +23,9 @@
             while(have_posts() ) : the_post();
               get_template_part('solicitations-content', get_post_format());
             endwhile;
-          endif;
-      ?>
+          else: ?>
+            <p><?php _e('No posts by this author.'); ?></p>
+      <?php endif; ?>
     </div>
   </div>
 </div>
