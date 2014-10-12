@@ -10,7 +10,19 @@
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
+      <div class="disclaimer footer-disclaimer">
+        <p class="disclaimer">
+          The City of Atlanta (the “City”) does not warrant, represent or guarantee the accuracy or completeness of information provided at this website. Information provided here is simply for your convenience. There may be recent addenda or changes in the Request for Proposals (“RFP”) or bid documents including, among other things, the bidding instructions, general conditions, technical specifications, and exhibits that may not be currently reflected at this site. The City shall not be responsible or liable in any way for errors, inaccuracies or omissions in any documents or information retrieved or downloaded from this site.
+        </p>
+        <p class="disclaimer">
+          For a complete set of specifications and the applicable RFP or bid documents, all interested bidders are directed to the City’s Plan Room (“Plan Room”) located at the Department of Procurement, Atlanta City Hall, 55 Trinity Avenue, S. W., Suite 1790, Atlanta, Georgia 30303.
+        </p>
+        <p class="disclaimer">
+          In the event of a conflict or discrepancy between the information or documents posted at this website and the RFP or bid documents published and contained in the Plan Room, the RFP or bid documents in the City’s Plan Room shall control.
+        </p>
+      </div>
+
+      <div class="footer-col footer-col-1 ten-padding">
         <ul class="contact-list">
           <li><strong>City of Atlanta<br />Department of Procurement</strong></li>
           <li>55 Trinity Avenue - Ste. 1900</li>
@@ -35,20 +47,10 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div class="footer-col footer-col-3 ten-padding">
         <p class="text">Our mission is to model best practices in public purchasing while promoting equity, fairness and economic inclusion.</p>
         <p class="text"><a href="http://codeforamerica.github.io/atlanta-procurement-www/rss">Get RSS updates on bid opportunities.</a>
         <p class="text"><a href="<?php echo site_url( '/supplier-registration/' ); ?>">Become a supplier</a> for the City of Atlanta.</p>
-        <div style="margin-top: 7px; border-top: 1px solid #ccc;">&nbsp;</div>
-        <p class="disclaimer">
-          The City of Atlanta (the “City”) does not warrant, represent or guarantee the accuracy or completeness of information provided at this website. Information provided here is simply for your convenience. There may be recent addenda or changes in the Request for Proposals (“RFP”) or bid documents including, among other things, the bidding instructions, general conditions, technical specifications, and exhibits that may not be currently reflected at this site. The City shall not be responsible or liable in any way for errors, inaccuracies or omissions in any documents or information retrieved or downloaded from this site.
-        </p>
-        <p class="disclaimer">
-          For a complete set of specifications and the applicable RFP or bid documents, all interested bidders are directed to the City’s Plan Room (“Plan Room”) located at the Department of Procurement, Atlanta City Hall, 55 Trinity Avenue, S. W., Suite 1790, Atlanta, Georgia 30303.
-        </p>
-        <p class="disclaimer">
-          In the event of a conflict or discrepancy between the information or documents posted at this website and the RFP or bid documents published and contained in the Plan Room, the RFP or bid documents in the City’s Plan Room shall control.
-        </p>
       </div>
     </div>
   </div>
