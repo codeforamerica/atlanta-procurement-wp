@@ -45,3 +45,4 @@
     </div>
   </div>
 
+<?php do_shortcode('[google-translator]'); get_footer();
