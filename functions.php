@@ -48,6 +48,20 @@
     return 'FC-0000 Change this solicitation title (!!!)';
   }
 
+  add_action( 'trashed_post', 'redirect_on_trash', 10, 1 );
+
+  /**
+   * Redirects logged-in Wordpress user back to dashboard after deleting a post.
+   *
+   * @since 1.0.0
+   *
+   * @param type $post_id The ID of the post they've trashed.
+   */
+  function redirect_on_trash($post_id) {
+    wp_redirect(admin_url());
+    exit;
+  }
+
   /**
    * Sets default post content.
    *
