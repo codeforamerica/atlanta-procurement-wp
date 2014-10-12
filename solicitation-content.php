@@ -29,7 +29,7 @@ Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?>
     <div class="col-sm-4">
       <label for="plan_holder_What's your first name">What's your first name?</label><span style="color: #c7254e; font-weight: bold;"> *</span>
       <input class="form-control input-lg col-sm-4" id="plan_holder_user_attributes_first_name" name="plan_holder[user_attributes][first_name]" placeholder="Jane" type="text">
-    </div>
+    </div><br />
     <div class="col-sm-4">
       <label for="plan_holder_What's your last name">What's your last name?</label><span style="color: #c7254e; font-weight: bold;"> *</span>
       <input class="form-control input-lg" id="plan_holder_user_attributes_last_name" name="plan_holder[user_attributes][last_name]" placeholder="Doe" type="text">
