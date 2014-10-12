@@ -16,9 +16,7 @@
 </script>
 <script type="IN/Share" data-url="<?php the_permalink(); ?>" data-counter="right"></script>
 
-<div class="alert alert-info">
-  <?php edit_post_link( 'Edit this post ', '', '' ); ?> &middot; <a href="<?php _e(get_delete_post_link()); ?>">Delete this post</a>
-</div>
+<?php get_template_part( 'edit_content', get_post_format() ); ?>
 
 <h1><?php the_title(); ?></h1>
 Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?> at <?php the_time( 'g:i a T' ); ?>.<br /><br />

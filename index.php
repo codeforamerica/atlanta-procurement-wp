@@ -30,14 +30,9 @@
       ?>
       <p>
         <?php
-            the_post(); ?>
-
-          <div class="alert alert-info">
-            <?php edit_post_link( 'Edit this page ', '', '' ); ?> &middot; <a href="<?php _e(get_delete_post_link()); ?>">Delete this page</a>
-          </div>
-
-        <?php
-            the_content();
+              the_post();
+              get_template_part( 'edit_content', get_post_format() );
+              the_content();
             endwhile;
           endif;
         ?>
