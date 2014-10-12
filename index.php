@@ -27,9 +27,6 @@
       <?php
           if(have_posts()) :
             while(have_posts()) :
-      ?>
-      <p>
-        <?php
               the_post();
               get_template_part( 'edit_content', get_post_format() );
               the_content();
