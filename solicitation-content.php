@@ -17,6 +17,7 @@
 <script type="IN/Share" data-url="<?php the_permalink(); ?>" data-counter="right"></script>
 
 <?php get_template_part( 'edit_content', get_post_format() ); ?>
+<?php get_template_part( 'csv_export', get_post_format() ); ?>
 
 <h1><?php the_title(); ?></h1>
 Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?> at <?php the_time( 'g:i a T' ); ?>.<br /><br />
@@ -28,52 +29,32 @@ Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?>
   <div class="row">
     <div class="col-sm-4">
       <label for="plan_holder_What's your first name">What's your first name?</label><span style="color: #c7254e; font-weight: bold;"> *</span>
-      <input class="form-control input-lg col-sm-4" id="plan_holder_user_attributes_first_name" name="plan_holder[user_attributes][first_name]" placeholder="Jane" type="text">
+      <input class="form-control input-lg col-sm-4" id="plan_holder_first_name" name="plan_holder[user_attributes][first_name]" placeholder="Jane" type="text">
     </div><br />
     <div class="col-sm-4">
       <label for="plan_holder_What's your last name">What's your last name?</label><span style="color: #c7254e; font-weight: bold;"> *</span>
-      <input class="form-control input-lg" id="plan_holder_user_attributes_last_name" name="plan_holder[user_attributes][last_name]" placeholder="Doe" type="text">
+      <input class="form-control input-lg" id="plan_holder_last_name" name="plan_holder[user_attributes][last_name]" placeholder="Doe" type="text">
     </div>
   </div><br>
 
   <div class="row">
     <div class="col-md-8">
       <label for="plan_holder_user_attributes_What's your email address">What's your email address?</label><span style="color: #c7254e; font-weight: bold;"> *</span>
-      <input class="form-control input-lg" id="plan_holder_user_attributes_email" name="plan_holder[user_attributes][email]" placeholder="janedoe@excellent-vendor.com" type="text" value="">
+      <input class="form-control input-lg" id="plan_holder_email" name="plan_holder[user_attributes][email]" placeholder="janedoe@excellent-vendor.com" type="text" value="">
       <span class="help-block">Be sure to use an email address that you check often to ensure you receive all updates.</span>
     </div>
   </div><br>
   <div class="row">
     <div class="col-md-6">
       <label for="plan_holder_company_attributes_Finally, what's the name of your company">Finally, what's the name of your company?</label><span style="color: #c7254e; font-weight: bold;"> *</span><br>
-      <input class="form-control input-lg" id="plan_holder_company_attributes_name" name="plan_holder[company_attributes][name]" placeholder="ACME Widgets, Inc." type="text">
+      <input class="form-control input-lg" id="plan_holder_company_name" name="plan_holder[company_attributes][name]" placeholder="ACME Widgets, Inc." type="text">
     </div><br><br>
     <div class="form-group">
       <div class="row">
         <div class="col-md-6">
-          <input class="btn-success btn" data-disable-with="Downloading bidder's package &amp; adding you to the planholder's list..." id="planholder-submit-btn" name="commit" type="submit" value="Submit to receive updates!" />
-          <input class="btn-primary btn" data-disable-with="Downloading bidder's package &amp; adding you to the planholder's list..." id="planholder-submit-btn" name="commit" type="submit" value="Join the planholder's list...">
+          <input class="btn-success btn" data-disable-with="Adding you to the update list..." id="update-submit-btn" name="commit" type="submit" value="Submit to receive updates!" />
+          <input class="btn-primary btn" data-disable-with="Adding you to the planholder's list..." id="planholder-submit-btn" name="commit" type="submit" value="Join the planholder's list...">
           <br /><br />
-          <span class="help-block">
-            Bid document downloads are packaged as a compressed ZIP file to save space and for faster download.
-            <a href="#" onclick="$('#zip-archive-directions').toggle(); return false;">Learn</a> how
-            to open a ZIP file on your system.
-          </span>
-        </div>
-      </div>
-
-      <div class="row" style="display: none;" id="zip-archive-directions">
-        <div class="col-md-6">
-          <div class="well">
-            <p>
-              To learn how to open a ZIP file on <strong>Microsoft Windows</strong>,
-              visit <a href="http://windows.microsoft.com/en-us/windows/compress-uncompress-files-zip-files#1TC=windows-7" target="_blank">Compress and uncompress (zip files)</a>.
-            </p>
-            <p>
-              To learn how to open a ZIP file on <strong>Mac OS X</strong>,
-              visit <a href="http://macs.about.com/od/faq1/f/How-To-Zip-And-Unzip-Files-And-Folders-On-A-Mac.htm" target="_blank">How to Zip and Unzip Files and Folders On a Mac</a>.
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -94,4 +75,5 @@ Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?>
   In the event of a conflict or discrepancy between the information or documents posted at this website and the RFP or bid documents published and contained in the Plan Room, the RFP or bid documents in the City’s Plan Room shall control.
 </p>
 
+<?php get_template_part( 'csv_export', get_post_format() ); ?>
 <?php get_template_part( 'disclaimer-modal', get_post_format() ); ?>
