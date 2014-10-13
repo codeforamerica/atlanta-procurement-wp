@@ -76,20 +76,8 @@
     global $_REQUEST;
 
     $content = <<<EOT
-      <h2>FC Number</h2>
-      <p>Add an FC number.</p>
-      &nbsp;
-
-      <h2>Project Name</h2>
-      <p>Add a project name to describe the new solicitation.</p>
-      &nbsp;
-
       <h2>Project summary</h2>
       <p>Add a project summary to describe the new solicitation.</p>
-      &nbsp;
-
-      <h2>Bids due</h2>
-      <p>When is the bid due? For example: 1:59pm EST, Monday, August 19, 2014</p>
       &nbsp;
 
       <h2>Pre-bid conference location</h2>
