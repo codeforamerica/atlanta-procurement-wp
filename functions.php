@@ -114,12 +114,9 @@
         <ul>
           <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14820" title="Web ad" target="_blank">Web ad</a></li>
           <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14816" title="Solicitation document" target="_blank">Solicitation document</a></li>
+          <li>Cost of solicitation documents: e.g., $150.00</li>
         </ul>
       </p>
-      &nbsp;
-
-      <h2>Cost of solicitation documents</h2>
-      <p>For example: $150.00</p>
       &nbsp;
 EOT;
 
