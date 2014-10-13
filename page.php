@@ -19,10 +19,12 @@
       <!-- THIS IS WHERE THE WORDPRESS CODE TO INCLUDE CONTENT GOES...! -->
 
       <?php
+          get_template_part( 'edit_content', get_post_format() );
+          get_template_part( 'latest-solicitations', get_post_format() );
+
           if(have_posts()) :
             while(have_posts()) :
               the_post();
-              get_template_part( 'edit_content', get_post_format() );
               the_content();
 
               if(is_page( 'Solicitations' )) :
