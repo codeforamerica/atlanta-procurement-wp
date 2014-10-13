@@ -76,6 +76,14 @@
     global $_REQUEST;
 
     $content = <<<EOT
+      <h2>FC Number</h2>
+      <p>Add an FC number.</p>
+      &nbsp;
+
+      <h2>Project Name</h2>
+      <p>Add a project name to describe the new solicitation.</p>
+      &nbsp;
+
       <h2>Project summary</h2>
       <p>Add a project summary to describe the new solicitation.</p>
       &nbsp;
