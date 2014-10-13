@@ -80,9 +80,13 @@
       <p>Add a project summary to describe the new solicitation.</p>
       &nbsp;
 
-      <h2>Pre-bid conference location</h2>
+      <h2>Bids due</h2>
+      <p>When is the bid due? For example: 1:59pm EST, Monday, August 19, 2014</p>
+      &nbsp;
+
+      <h2>Pre-bid conference date &amp; location</h2>
       <p>
-        Where is the pre-bid conference?
+        When and where are the pre-bid conference?
         Example pre-bid conference text:<br />
         1:30pm EST, Thursday, September 18, 2014<br />
         55 Trinity Ave SW, Atlanta, GA 30303
