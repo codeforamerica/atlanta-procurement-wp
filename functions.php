@@ -118,7 +118,7 @@
       </p>
       &nbsp;
 
-      <h2>Cost of printed documents</h2>
+      <h2>Cost of solicitation documents</h2>
       <p>For example: $150.00</p>
       &nbsp;
 EOT;
