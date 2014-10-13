@@ -106,10 +106,6 @@
         <ul>
           <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14820" title="Web ad" target="_blank">Web ad</a></li>
           <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14816" title="Solicitation document" target="_blank">Solicitation document</a></li>
-          <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=15086" title="Addendum No. 1" target="_blank">Addendum No. 1</a></li>
-          <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=15182" title="Addendum No. 2" target="_blank">Addendum No. 2</a></li>
-          <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=15252" title="Addendum No. 3" target="_blank">Addendum No. 3</a></li>
-          <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14999" title="Pre-proposal conference sign-in sheet" target="_blank">Pre-proposal conference sign-in sheet</a></li>
         </ul>
       </p>
       &nbsp;
