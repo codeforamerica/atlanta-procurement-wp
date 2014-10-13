@@ -93,3 +93,5 @@ Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?>
 <p>
   In the event of a conflict or discrepancy between the information or documents posted at this website and the RFP or bid documents published and contained in the Plan Room, the RFP or bid documents in the City’s Plan Room shall control.
 </p>
+
+<?php get_template_part( 'disclaimer-modal', get_post_format() ); ?>
