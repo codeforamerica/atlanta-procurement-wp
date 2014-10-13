@@ -92,10 +92,6 @@
         <strong>Project summary</strong><br />
         <span id="project-summary"></span>
       </p>
-      <p>
-        <strong>Bids due</strong><br />
-        <span id="project-bids-due"></span>
-      </p>
       <div id="project-more-info-link"></div>
     </div>
   </div>
