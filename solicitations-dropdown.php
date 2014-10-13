@@ -16,6 +16,10 @@
             .text("Get more information")
           );
 
+          if(solicitation.custom_fields.bids_due != null) {
+            $('#project-bids-due').html(DateFormat.format.date( new Date(parseInt(solicitation.custom_fields.bids_due[0]) * 1000), 'h:mm p, ddd, MMMM D, yyyy'));
+          }
+          
           $('#project-summary').html(solicitation.excerpt);
           $('#project-info-title').html(solicitation.title);
           $('#project-info-well').fadeIn();
@@ -86,6 +90,10 @@
       <p>
         <strong>Project summary</strong><br />
         <span id="project-summary"></span>
+      </p>
+      <p>
+        <strong>Bids due</strong><br />
+        <span id="project-bids-due"></span>
       </p>
       <div id="project-more-info-link"></div>
     </div>
