@@ -20,7 +20,8 @@
 <?php get_template_part( 'csv_export', get_post_format() ); ?>
 
 <h1><?php the_title(); ?></h1>
-Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?> at <?php the_time( 'g:i a T' ); ?>.<br /><br />
+Posted by <?php the_author_posts_link(); ?> on <?php the_date( 'l, F j, Y' ); ?> at <?php the_time( 'g:i a T' ); ?>.<br />
+Last modified <?php the_modified_time('l, F j, Y'); ?> at <?php the_modified_time( 'g:i a T' ); ?>.<br />
 
 <?php the_content(); ?>
 
