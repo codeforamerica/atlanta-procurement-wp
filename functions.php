@@ -76,6 +76,14 @@
     global $_REQUEST;
 
     $content = <<<EOT
+      <h2>Contracting officer</h2>
+      <p>
+        Who is the contracting officer? Add their information here. For example:<br />
+        Jane C. Officer (janeofficer@atlantaga.gov)<br />
+        404.330.6517
+      </p>
+      &nbsp;
+      
       <h2>Project summary</h2>
       <p>Add a project summary to describe the new solicitation.</p>
       &nbsp;
@@ -99,14 +107,6 @@
         Example site visit text:<br />
         1:30pm EST, Thursday, September 18, 2014<br />
         55 Trinity Ave SW, Atlanta, GA 30303
-      </p>
-      &nbsp;
-
-      <h2>Contracting officer</h2>
-      <p>
-        Who is the contracting officer? Add their information here. For example:<br />
-        Jane C. Officer (janeofficer@atlantaga.gov)<br />
-        404.330.6517
       </p>
       &nbsp;
 
