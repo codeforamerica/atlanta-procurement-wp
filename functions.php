@@ -8,6 +8,11 @@
    * @since 1.0.0
    */
 
+  @ini_set( 'upload_max_size' , '64M' );
+  @ini_set( 'post_max_size', '64M');
+  @ini_set( 'max_execution_time', '300' );
+
+
   /** Tell WordPress to run procure_pretty_setup() when 'after_setup_theme' hook is run. */
   add_action( 'after_setup_theme', 'procure_pretty_setup' );
 
@@ -83,13 +88,9 @@
         404.330.6517
       </p>
       &nbsp;
-      
+
       <h2>Project summary</h2>
       <p>Add a project summary to describe the new solicitation.</p>
-      &nbsp;
-
-      <h2>Bids due</h2>
-      <p>When is the bid due? For example: 1:59pm EST, Monday, August 19, 2014</p>
       &nbsp;
 
       <h2>Pre-bid conference date &amp; location</h2>
