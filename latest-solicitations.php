@@ -11,7 +11,13 @@
             <li>
               <a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
             </li>
-        <?php endwhile; remove_filter( 'posts_where', 'filter_where' ); wp_reset_query(); ?>
+        <?php endwhile;
+              remove_filter( 'posts_where', 'filter_where' );
+              wp_reset_query();
+
+              if(!$posts_query->have_posts()): ?>
+                No new solicitations posted within the last week. <a href="<?php echo site_url( '/solicitations/' ); ?>">See previous solicitations</a>.
+        <?php endif; ?>
       </ul>
     </div>
 <?php } ?>
