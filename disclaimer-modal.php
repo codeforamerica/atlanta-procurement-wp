@@ -2,6 +2,10 @@
 <script type="text/javascript">
   $(function() {
     /* Don't show documents people click on unless they agree to the disclaimer popup. */
+    $("a[href*='documentid=']").bind("contextmenu", function(e) {
+      return false;
+    });
+
     $("a[href*='documentid=']").on('click', function() {
       $('#disclaimer-dialog').modal('toggle');
       window.document_loading = $(this).attr('href');
