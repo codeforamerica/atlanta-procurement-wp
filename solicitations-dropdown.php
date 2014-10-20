@@ -44,14 +44,18 @@
               );
             });
 
-            $('#project-solicitations,#solicitation-label').fadeIn();
-          } else { }
+            $('#project-solicitations,#solicitation-label,#choose-solicitations').fadeIn();
+            $('#no-active-solicitations').fadeOut();
+          } else {
+            $('#no-active-solicitations').fadeIn();
+            $('#project-solicitations,#solicitation-label,#choose-solicitations,#project-info-well').fadeOut();
+          }
         })
         .fail(function(data) {
           console.log(data);
           console.log("Ooops.");
         });
-      } else if($(this).val() == 'blank') { $('#project-info-well,#project-solicitations,#solicitation-label').fadeOut(); }
+      } else if($(this).val() == 'blank') { $('#project-info-well,#project-solicitations,#solicitation-label,#no-active-solicitations').fadeOut(); }
     });
   });
   /* ]]> */
@@ -77,11 +81,15 @@
 </select>
 </p><br />
 
-<p>
+<p id="choose-solicitations" style="display: none;">
   <strong><label for="plan_holder[solicitation]" style="display: none;" id="solicitation-label">2. Choose a solicitation.</label></strong><br /><br />
   <select class="form-control input-lg" id="project-solicitations" name="plan_holder[solicitation]" style="display: none;">
     <option value="blank"></option>
   </select>
+</p>
+
+<p id="no-active-solicitations" style="display: none;">
+  This category doesn't include any active solicitations at the moment. Please choose another category.
 </p>
 
 <div class="row" id="project-info-well" style="display: none;">
