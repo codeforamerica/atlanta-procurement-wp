@@ -13,7 +13,7 @@
             .append($('<a></a>')
             .attr("href", solicitation.url)
             .attr("class", "btn btn-success")
-            .attr("style", "color: #fff")
+            .attr("style", "color: #fff; text-decoration: none")
             .text("Get more information")
           );
 
