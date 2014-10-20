@@ -34,7 +34,7 @@
         var dept_url = "<?php _e(site_url()); ?>/?json=get_tag_posts&tag_slug=" + department;
         $.getJSON(dept_url, function(data) {
           var solicitations = data.posts;
-          if(solicitations.length > 0) {
+          if(solicitations != undefined && solicitations.length > 0) {
             $('#project-solicitations').empty().append($('<option></option>').attr("value", "blank"));
             $.each(solicitations, function(key, value) {
               $('#project-solicitations')
