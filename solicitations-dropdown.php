@@ -48,8 +48,8 @@
                   /* Include in the solicitations dropdown if the bid due date hasn't passed. */
                   $('#project-solicitations')
                     .append($('<option></option>')
-                      .attr("value", value.id)
-                      .text(value.title)
+                      .attr("value", solicitation.id)
+                      .text(solicitation.title)
                     );
                 }
               }
