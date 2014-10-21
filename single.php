@@ -15,11 +15,6 @@ get_header(); ?>
         <?php get_sidebar(); ?>
       </div>
       <div style="float: right; width: 600px; text-align: left;">
-        <script src="//platform.linkedin.com/in.js" type="text/javascript">
-          /* <![CDATA[ */
-            lang: en_US
-          /* ]]> */
-        </script>
 
         <?php if(have_posts()) : the_post(); ?>
           <!-- THIS IS WHERE THE WORDPRESS CODE TO INCLUDE CONTENT GOES...! -->
