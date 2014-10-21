@@ -36,8 +36,8 @@
       require_once( $locale_file );
   }
 
-  add_filter( 'default_content', 'default_editor_content' );
-  add_filter( 'default_title', 'solicitation_default_title' );
+  add_filter( 'default_content', 'default_editor_content', 10, 2 );
+  add_filter( 'default_title', 'solicitation_default_title', 10, 2 );
 
   /**
    * Sets default post title.
@@ -49,8 +49,9 @@
    * @param type $content Initial post content.
    * @todo Only have this work for posts in the 'Solicitations' category.
    */
-  function solicitation_default_title( $content ) {
-    return 'FC-0000 Change this solicitation title (!!!)';
+  function solicitation_default_title( $content, $post ) {
+    if( $post->post_type == 'post' )
+      return 'FC-0000 Change this solicitation title (!!!)';
   }
 
   add_action( 'trashed_post', 'redirect_on_trash', 10, 1 );
@@ -77,50 +78,52 @@
    * @param type $content Initial post content.
    * @todo Only have this work for posts in the 'Solicitations' category.
    */
-  function default_editor_content( $content ) {
+  function default_editor_content( $content, $post ) {
     global $_REQUEST;
 
-    $content = <<<EOT
-      <h2>Contracting officer</h2>
-      <p>
-        Who is the contracting officer? Add their information here. For example:<br />
-        Jane C. Officer (janeofficer@atlantaga.gov)<br />
-        404.330.6517
-      </p>
-      &nbsp;
+    if( $post->post_type == 'post' ) {
+      $content = <<<EOT
+        <h2>Contracting officer</h2>
+        <p>
+          Who is the contracting officer? Add their information here. For example:<br />
+          Jane C. Officer (janeofficer@atlantaga.gov)<br />
+          404.330.6517
+        </p>
+        &nbsp;
 
-      <h2>Project summary</h2>
-      <p>Add a project summary to describe the new solicitation.</p>
-      &nbsp;
+        <h2>Project summary</h2>
+        <p>Add a project summary to describe the new solicitation.</p>
+        &nbsp;
 
-      <h2>Pre-bid conference date &amp; location</h2>
-      <p>
-        When and where are the pre-bid conference?
-        Example pre-bid conference text:<br />
-        1:30pm EST, Thursday, September 18, 2014<br />
-        55 Trinity Ave SW, Atlanta, GA 30303
-      </p>
-      &nbsp;
+        <h2>Pre-bid conference date &amp; location</h2>
+        <p>
+          When and where are the pre-bid conference?
+          Example pre-bid conference text:<br />
+          1:30pm EST, Thursday, September 18, 2014<br />
+          55 Trinity Ave SW, Atlanta, GA 30303
+        </p>
+        &nbsp;
 
-      <h2>Site visit information</h2>
-      <p>
-        When and where is the site visit? If there is no site visit associated with this solicitation, you can delete this entire block.
-        Example site visit text:<br />
-        1:30pm EST, Thursday, September 18, 2014<br />
-        55 Trinity Ave SW, Atlanta, GA 30303
-      </p>
-      &nbsp;
+        <h2>Site visit information</h2>
+        <p>
+          When and where is the site visit? If there is no site visit associated with this solicitation, you can delete this entire block.
+          Example site visit text:<br />
+          1:30pm EST, Thursday, September 18, 2014<br />
+          55 Trinity Ave SW, Atlanta, GA 30303
+        </p>
+        &nbsp;
 
-      <h2>Bid documents</h2>
-      <p>
-        <ul>
-          <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14820" title="Web ad" target="_blank">Web ad</a></li>
-          <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14816" title="Solicitation document" target="_blank">Solicitation document</a></li>
-          <li>Cost of solicitation documents: e.g., $150.00</li>
-        </ul>
-      </p>
-      &nbsp;
+        <h2>Bid documents</h2>
+        <p>
+          <ul>
+            <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14820" title="Web ad" target="_blank">Web ad</a></li>
+            <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14816" title="Solicitation document" target="_blank">Solicitation document</a></li>
+            <li>Cost of solicitation documents: e.g., $150.00</li>
+          </ul>
+        </p>
+        &nbsp;
 EOT;
 
-    return $content;
+      return $content;
+    }
   }
