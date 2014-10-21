@@ -1,26 +1,27 @@
 <!-- Build a dropdown box with all of the solicitations ... -->
 <script type="text/javascript">
   /* <![CDATA[ */
+  function no_data() {
+    $('#no-active-solicitations').fadeIn();
+    $('#project-solicitations,#solicitation-label,#choose-solicitations,#project-info-well').fadeOut();
+  }
+
   $(function() {
     $('#project-solicitations').change(function() {
       if($(this).val() != 'blank') {
         var post_url = "<?php _e(site_url()); ?>/?json=get_post&post_id=" + $(this).val();
         $.getJSON(post_url, function(data) {
           var solicitation = data.post;
-
           $('#project-more-info-link')
             .empty()
             .append($('<a></a>')
-            .attr("href", solicitation.url)
-            .attr("class", "btn btn-success")
-            .attr("style", "color: #fff; text-decoration: none")
-            .text("Get more information")
-          );
+              .attr("href", solicitation.url)
+              .attr("class", "btn btn-success")
+              .attr("style", "color: #fff; text-decoration: none")
+              .text("Get more information")
+            );
 
-          if(solicitation.custom_fields.bids_due != null) {
-            $('#project-bids-due').html(DateFormat.format.date( new Date(parseInt(solicitation.custom_fields.bids_due[0]) * 1000), 'h:mm p, ddd, MMMM D, yyyy'));
-          }
-
+          $('#project-bids-due').html(DateFormat.format.date( new Date(parseInt(solicitation.custom_fields.bids_due[0]) * 1000 ), 'h:mm p, ddd, MMMM D, yyyy'));
           $('#project-summary').html(solicitation.excerpt);
           $('#project-info-title').html(solicitation.title);
           $('#project-info-well').fadeIn();
@@ -36,26 +37,35 @@
           var solicitations = data.posts;
           if(solicitations != undefined && solicitations.length > 0) {
             $('#project-solicitations').empty().append($('<option></option>').attr("value", "blank"));
-            $.each(solicitations, function(key, value) {
-              $('#project-solicitations')
-                .append($('<option></option>')
-                .attr("value", value.id)
-                .text(value.title)
-              );
+            $.each(solicitations, function(key, solicitation) {
+              var due_date = null;
+
+              if(solicitation.custom_fields.bids_due != undefined) {
+                due_date = parseInt(solicitation.custom_fields.bids_due[0]);
+                var right_now = Math.ceil(new Date().getTime() / 1000);
+
+                if(due_date > right_now) {
+                  /* Include in the solicitations dropdown if the bid due date hasn't passed. */
+                  $('#project-solicitations')
+                    .append($('<option></option>')
+                      .attr("value", value.id)
+                      .text(value.title)
+                    );
+                }
+              }
             });
 
-            $('#project-solicitations,#solicitation-label,#choose-solicitations').fadeIn();
-            $('#no-active-solicitations').fadeOut();
-          } else {
-            $('#no-active-solicitations').fadeIn();
-            $('#project-solicitations,#solicitation-label,#choose-solicitations,#project-info-well').fadeOut();
-          }
+            if( $('#project-solicitations option').length > 1 ) {
+              $('#project-solicitations,#solicitation-label,#choose-solicitations').fadeIn();
+              $('#no-active-solicitations').fadeOut();
+            } else { no_data(); }
+          } else { no_data(); }
         })
         .fail(function(data) {
           console.log(data);
           console.log("Ooops.");
         });
-      } else if($(this).val() == 'blank') { $('#project-info-well,#project-solicitations,#solicitation-label,#no-active-solicitations').fadeOut(); }
+      } else if($(this).val() == 'blank') { no_data(); }
     });
   });
   /* ]]> */
