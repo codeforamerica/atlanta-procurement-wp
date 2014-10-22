@@ -12,6 +12,12 @@
   @ini_set( 'post_max_size', '64M');
   @ini_set( 'max_execution_time', '300' );
 
+  add_filter( 'media_send_to_editor', 'include_upload_date', 10, 3 );
+
+  function include_upload_date( $html, $id, $attachment ) {
+    $post_description = "  (Added: " . date("m/d/Y @ g:i a T") . ")";
+    return $html . $post_description;
+  }
 
   /** Tell WordPress to run procure_pretty_setup() when 'after_setup_theme' hook is run. */
   add_action( 'after_setup_theme', 'procure_pretty_setup' );
