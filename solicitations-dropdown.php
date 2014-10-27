@@ -74,6 +74,7 @@
 <strong><label for="plan_holder[department]">1. Choose a department to get started</label></strong><br /><br />
 <select class="form-control input-lg" id="project-departments" name="plan_holder[department]">
   <option value="blank"></option>
+  <option value="all">All solicitations</option>
   <option value="citywide">Citywide</option>
   <option value="aviation">Aviation</option>
   <option value="corrections">Corrections</option>
