@@ -89,7 +89,7 @@
 
     if( $post->post_type == 'post' ) {
       $content = <<<EOT
-        <h2>Contracting officer</h2>
+        <h2>Contracting Officer</h2>
         <p>
           Who is the contracting officer? Add their information here. For example:<br />
           Jane C. Officer (janeofficer@atlantaga.gov)<br />
@@ -97,11 +97,11 @@
         </p>
         &nbsp;
 
-        <h2>Project summary</h2>
+        <h2>Project Summary</h2>
         <p>Add a project summary to describe the new solicitation.</p>
         &nbsp;
 
-        <h2>Pre-bid conference date &amp; location</h2>
+        <h2>Pre-bid Conference Date &amp; Location</h2>
         <p>
           When and where are the pre-bid conference?
           Example pre-bid conference text:<br />
@@ -110,7 +110,7 @@
         </p>
         &nbsp;
 
-        <h2>Site visit information</h2>
+        <h2>Site Visit Information</h2>
         <p>
           When and where is the site visit? If there is no site visit associated with this solicitation, you can delete this entire block.
           Example site visit text:<br />
@@ -119,7 +119,7 @@
         </p>
         &nbsp;
 
-        <h2>Bid documents</h2>
+        <h2>Bid/proposal Documents</h2>
         <p>
           <ul>
             <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14820" title="Web ad" target="_blank">Web ad</a></li>
