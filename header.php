@@ -73,9 +73,9 @@
           </a>
 
           <div class="trigger">
-            <a class="page-link" href="<?php echo site_url( '/supplier-registration/' ); ?>" style="color: white; font-weight: 500;">Become a supplier</a>
+            <a class="page-link" href="<?php echo site_url( '/supplier-registration/' ); ?>" style="color: white; font-weight: 500;">Become a Supplier</a>
             <a class="page-link" href="<?php echo site_url( '/solicitations/' ); ?>">Solicitations</a>
-            <a class="page-link" href="<?php echo site_url( '/surplus-auctions/' ); ?>">Surplus auctions</a>
+            <a class="page-link" href="<?php echo site_url( '/surplus-auctions/' ); ?>">Surplus Auctions</a>
             <a class="page-link" href="<?php echo site_url( '/faqs/' ); ?>">FAQs</a>
             <a class="page-link" href="<?php echo site_url( '/contact-us/' ); ?>">Contact Us</a>
           </div>

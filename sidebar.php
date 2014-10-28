@@ -15,17 +15,17 @@
 <a href="<?php echo site_url( '/#vision/' ); ?>">Vision</a><br /><br />
 
 <strong>What we do</strong><br />
-<a href="<?php echo site_url( '/solicitations/' ); ?>">Commodity &amp; service solicitations</a><br />
-<a href="<?php echo site_url( '/surplus-auctions/' ); ?>">Surplus auctions</a><br />
-<a href="<?php echo site_url( '/supplier-registration/' ); ?>">Supplier registration</a><br /><br />
+<a href="<?php echo site_url( '/solicitations/' ); ?>">Commodity &amp; Service Solicitations</a><br />
+<a href="<?php echo site_url( '/surplus-auctions/' ); ?>">Surplus Auctions</a><br />
+<a href="<?php echo site_url( '/supplier-registration/' ); ?>">Supplier Registration</a><br /><br />
 
-<strong>Information &amp; services</strong><br />
+<strong>Information &amp; Services</strong><br />
 
 <a href="<?php echo site_url( '/faqs' ); ?>">Frequently Asked Questions</a><br />
 <a href="#">Calendar</a><br />
 <a href="#">Compliance</a><br />
-<a href="#">Open record requests</a><br />
-<a href="<?php echo site_url( '/local-bidder-program/' ); ?>">Local bidder information</a><br />
-<a href="<?php echo site_url( '/procurement-code/' ); ?>">Procurement code</a><br />
-<a href="<?php echo site_url( '/procurement-forms/' ); ?>">Procurement forms</a><br />
-<a href="#">User survey</a><br />
+<a href="#">Open Record Requests</a><br />
+<a href="<?php echo site_url( '/local-bidder-program/' ); ?>">Local Bidder Information</a><br />
+<a href="<?php echo site_url( '/procurement-code/' ); ?>">Procurement Code</a><br />
+<a href="<?php echo site_url( '/procurement-forms/' ); ?>">Procurement Forms</a><br />
+<a href="#">User Survey</a><br />
