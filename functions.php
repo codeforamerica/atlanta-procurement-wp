@@ -91,20 +91,20 @@
       $content = <<<EOT
         <h2>Contracting Officer</h2>
         <p>
-          Who is the contracting officer? Add their information here. For example:<br />
+          <span style="color: red;">Who is the contracting officer? Add their information here. For example:</span><br />
           Jane C. Officer (janeofficer@atlantaga.gov)<br />
           404.330.6517
         </p>
         &nbsp;
 
         <h2>Project Summary</h2>
-        <p>Add a project summary to describe the new solicitation.</p>
+        <p><span style="color: red;">Add a project summary to describe the new solicitation.</span</p>
         &nbsp;
 
         <h2>Pre-bid Conference Date &amp; Location</h2>
         <p>
-          When and where are the pre-bid conference?
-          Example pre-bid conference text:<br />
+          <span style="color: red;">When and where are the pre-bid conference?
+          Example pre-bid conference text:</span><br />
           1:30pm EST, Thursday, September 18, 2014<br />
           55 Trinity Ave SW, Atlanta, GA 30303
         </p>
@@ -112,8 +112,8 @@
 
         <h2>Site Visit Information</h2>
         <p>
-          When and where is the site visit? If there is no site visit associated with this solicitation, you can delete this entire block.
-          Example site visit text:<br />
+          <span style="color: red;">When and where is the site visit? If there is no site visit associated with this solicitation, you can delete this entire block.
+          Example site visit text:</span><br />
           1:30pm EST, Thursday, September 18, 2014<br />
           55 Trinity Ave SW, Atlanta, GA 30303
         </p>
