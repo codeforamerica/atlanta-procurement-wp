@@ -34,26 +34,9 @@
         var department = $('#project-departments').val();
         var dept_url = "<?php _e(site_url()); ?>/?json=get_tag_posts&tag_slug=" + department;
         $.getJSON(dept_url, function(data) {
-          var solicitations = data.posts;
+          window.solicitations = data.posts;
           if(solicitations != undefined && solicitations.length > 0) {
-            $('#project-solicitations').empty().append($('<option></option>').attr("value", "blank"));
-            $.each(solicitations, function(key, solicitation) {
-              var due_date = null;
-
-              if(solicitation.custom_fields.bids_due != undefined) {
-                due_date = parseInt(solicitation.custom_fields.bids_due[0]);
-                var right_now = Math.ceil(new Date().getTime() / 1000);
-
-                if(due_date > right_now) {
-                  /* Include in the solicitations dropdown if the bid due date hasn't passed. */
-                  $('#project-solicitations')
-                    .append($('<option></option>')
-                      .attr("value", solicitation.id)
-                      .text(solicitation.title)
-                    );
-                }
-              }
-            });
+            $('#product-category-cs,#product-category-label').fadeIn();
 
             if( $('#project-solicitations option').length > 1 ) {
               $('#project-solicitations,#solicitation-label,#choose-solicitations').fadeIn();
@@ -66,6 +49,55 @@
           console.log("Ooops.");
         });
       } else if($(this).val() == 'blank') { no_data(); }
+    });
+
+    $('#product-category-cs').change(function() {
+      var commodity_sols = [], service_sols = [];
+
+      if(solicitations.length > 0) {
+        for(var i = 0; i < solicitations.length; i++) {
+          for(var j = 0; j < solicitations[i].categories.length; j++) {
+            if(solicitations[i].categories[j].slug == "commodities") {
+              commodity_sols.push(solicitations[i]);
+            } else if(solicitations[i].categories[j].slug == "services") {
+              service_sols.push(solicitations[i]);
+            }
+          }
+        }
+
+        $('#project-solicitations').empty().append($('<option></option>').attr("value", "blank"));
+
+        var _solicitations;
+
+        if($(this).val() == 'services') {
+          _solicitations = service_sols;
+        } else if($(this).val() == 'commodities') {
+          _solicitations = commodity_sols;
+        }
+
+        $.each(_solicitations, function(key, solicitation) {
+          var due_date = null;
+
+          if(solicitation.custom_fields.bids_due != undefined) {
+            due_date = parseInt(solicitation.custom_fields.bids_due[0]);
+            var right_now = Math.ceil(new Date().getTime() / 1000);
+
+            if(due_date > right_now) {
+              /* Include in the solicitations dropdown if the bid due date hasn't passed. */
+              $('#project-solicitations')
+                .append($('<option></option>')
+                  .attr("value", solicitation.id)
+                  .text(solicitation.title)
+                );
+            }
+          }
+        });
+
+        if( $('#project-solicitations option').length > 1 ) {
+          $('#project-solicitations,#solicitation-label,#choose-solicitations').fadeIn();
+          $('#no-active-solicitations').fadeOut();
+        } else { no_data(); }
+      }
     });
   });
   /* ]]> */
@@ -92,8 +124,17 @@
 </select>
 </p><br />
 
+<p id="choose-commodity-service">
+  <strong><label for="plan_holder[product_category]" id="product-category-label" style="display: none;">2. Choose commodities or services.</label></strong><br /><br />
+  <select class="form-control input-lg" id="product-category-cs" style="display: none;">
+    <option value="blank"></option>
+    <option value="services">Services</option>
+    <option value="commodities">Commodities</option>
+  </select>
+</p><br />
+
 <p id="choose-solicitations" style="display: none;">
-  <strong><label for="plan_holder[solicitation]" style="display: none;" id="solicitation-label">2. Choose a solicitation.</label></strong><br /><br />
+  <strong><label for="plan_holder[solicitation]" style="display: none;" id="solicitation-label">3. Choose a solicitation.</label></strong><br /><br />
   <select class="form-control input-lg" id="project-solicitations" name="plan_holder[solicitation]" style="display: none;">
     <option value="blank"></option>
   </select>
