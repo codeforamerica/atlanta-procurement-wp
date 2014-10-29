@@ -22,7 +22,6 @@
 <strong>Information &amp; Services</strong><br />
 
 <a href="<?php echo site_url( '/faqs' ); ?>">Frequently Asked Questions</a><br />
-<a href="#">Calendar</a><br />
 <a href="#">Compliance</a><br />
 <a href="#">Open Record Requests</a><br />
 <a href="<?php echo site_url( '/local-bidder-program/' ); ?>">Local Bidder Information</a><br />
