@@ -14,6 +14,7 @@
 
 <strong>What we do</strong><br />
 <a href="<?php echo site_url( '/solicitations/' ); ?>">Commodity &amp; Service Solicitations</a><br />
+<a href="<?php echo site_url( '/archived-solicitations/' ); ?>">Archived Solicitations</a><br />
 <a href="<?php echo site_url( '/surplus-auctions/' ); ?>">Surplus Auctions</a><br />
 <a href="<?php echo site_url( '/supplier-registration/' ); ?>">Supplier Registration</a><br /><br />
 
