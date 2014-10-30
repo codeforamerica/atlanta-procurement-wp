@@ -10,7 +10,7 @@
 ?>
 
 <strong>Welcome</strong><br />
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Introduction</a><br />
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Introduction</a><br /><br />
 
 <strong>What we do</strong><br />
 <a href="<?php echo site_url( '/solicitations/' ); ?>">Commodity &amp; Service Solicitations</a><br />
