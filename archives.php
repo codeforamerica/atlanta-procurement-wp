@@ -19,12 +19,8 @@ get_header(); ?>
         departments. Use the listing below to find all solicitations.
       </p><br />
 
-      <?php
-        $args = array ( 'category_name' => 'Solicitations', 'posts_per_page' => 5, 'post_type' => 'post', 'orderby' => 'post_date' );
-        $posts = get_posts( $args );
-        foreach( $posts as $post ):
-          get_template_part( 'solicitations-content', get_post_format() );
-        endforeach; ?>
+      <!-- TODO: Have this display a list of truly archived posts. -->
+      <?php get_template_part( 'solicitations-dropdown', get_post_format() ); ?>
     </div>
   </div>
 </div>
