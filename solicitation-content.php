@@ -22,6 +22,7 @@
 
 <?php the_content(); ?>
 
+<br /><br /><br />
 <h2>Sign up for further updates</h2>
 <div class="form-group">
   <div class="row">
