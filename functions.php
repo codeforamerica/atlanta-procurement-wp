@@ -106,7 +106,7 @@
           <span style="color: red;">When and where are the pre-bid conference?
           Example pre-bid conference text:</span><br />
           1:30pm EST, Thursday, September 18, 2014<br />
-          55 Trinity Ave SW, Atlanta, GA 30303
+          55 Trinity Ave SW, Suite 1900, Atlanta, GA 30303
         </p>
         &nbsp;
 
