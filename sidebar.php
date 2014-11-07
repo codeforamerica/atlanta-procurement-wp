@@ -25,3 +25,4 @@
 <a href="<?php echo site_url( '/local-bidder-program/' ); ?>">Local Bidder Information</a><br />
 <a href="<?php echo site_url( '/procurement-code/' ); ?>">Procurement Code</a><br />
 <a href="<?php echo site_url( '/procurement-forms/' ); ?>">Procurement Forms</a><br />
+<a href="#">Supplier Survey</a><br />
