@@ -37,6 +37,11 @@
   <label class="label <?php echo($sol_status_label); ?>"><?php the_field('solicitation_status') ?></label>
 </p><br />
 
+<p>
+  <h2>Bids/Proposals Due</h2>
+  <?php echo DateTime::createFromFormat('m/d/y g:i a', get_field('bids_due'))->format('l, F j, Y \a\t g:i a'); ?> ET
+</p><br />
+
 <?php the_content(); ?>
 
 <br /><br /><br />
