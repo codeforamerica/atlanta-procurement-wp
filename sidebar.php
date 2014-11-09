@@ -21,7 +21,7 @@
 <strong>Information &amp; Services</strong><br />
 
 <a href="<?php echo site_url( '/faqs' ); ?>">Frequently Asked Questions</a><br />
-<a href="<?php echo site_url( '/procurement-forms/' ); ?>">Open Record Requests</a><br />
+<a href="<?php echo site_url( '/open-records-act-requests/' ); ?>">Open Record Requests</a><br />
 <a href="<?php echo site_url( '/local-bidder-program/' ); ?>">Local Bidder Information</a><br />
 <a href="<?php echo site_url( '/procurement-code/' ); ?>">Procurement Code</a><br />
 <a href="<?php echo site_url( '/procurement-forms/' ); ?>">Procurement Forms</a><br />
