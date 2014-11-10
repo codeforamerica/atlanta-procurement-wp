@@ -17,7 +17,7 @@
 <h1><?php the_title(); ?></h1>
 <p>
   Posted on <?php the_date( 'l, F j, Y' ); ?> at <?php the_time( 'g:i a T' ); ?>.<br />
-  Last modified <?php the_modified_time('l, F j, Y'); ?> at <?php the_modified_time( 'g:i a T' ); ?>.
+  Last modified <?php the_modified_time('l, F j, Y \a\t g:i a T' ); ?>.
 </p>
 <p>
   <label class="label <?php echo return_solicitation_label(get_field('solicitation_status')); ?>"><?php the_field('solicitation_status') ?></label>
