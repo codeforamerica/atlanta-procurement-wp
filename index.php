@@ -10,7 +10,7 @@
       <?php get_sidebar(); ?>
     </div>
     <div style="float: right; width: 600px; text-align: left;">
-      <?php get_template_part( 'linkedin-share', get_post_format() ); ?>
+      <?php if(!is_search()): get_template_part( 'linkedin-share', get_post_format() ); endif; ?>
 
       <!-- THIS IS WHERE THE WORDPRESS CODE TO INCLUDE CONTENT GOES...! -->
       <?php
