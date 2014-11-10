@@ -1,6 +1,6 @@
 <p>
   <h3><strong><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></strong>
-    &nbsp;&nbsp;
+    <br />
     <label class="label <?php echo return_solicitation_label(get_field('solicitation_status')); ?>">
       <?php echo get_field('solicitation_status'); ?>
     </label>
