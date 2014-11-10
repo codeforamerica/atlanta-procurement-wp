@@ -17,9 +17,14 @@
 
           if(have_posts()) :
             while(have_posts()) :
-              the_post();
-              get_template_part( 'edit_content', get_post_format() );
-              the_content();
+              if(!is_search()):
+                the_post();
+                the_content();
+                //get_template_part( 'edit_content', get_post_format() );
+              elseif(is_search()):
+                the_post();
+                get_template_part( 'solicitations-content', get_post_format() );
+              endif;
             endwhile;
           endif;
         ?>

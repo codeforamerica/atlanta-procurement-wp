@@ -12,6 +12,22 @@
   @ini_set( 'post_max_size', '64M');
   @ini_set( 'max_execution_time', '300' );
 
+  function return_solicitation_label( $solicitation_status ) {
+    if ( $solicitation_status == 'Under Evaluation' ) {
+      return 'label-warning';
+    } else if ( $solicitation_status == 'Canceled' ) {
+      return 'label-danger';
+    } else if ( $solicitation_status == 'Active' ) {
+      return 'label-primary';
+    } else if ( $solicitation_status == 'Awarded' ) {
+      return 'label-default';
+    } else if ( $solicitation_status == 'Open' ) {
+      return 'label-success';
+    }
+
+    return 'label-default';
+  }
+
   add_filter( 'media_send_to_editor', 'include_upload_date', 10, 3 );
 
   function include_upload_date( $html, $id, $attachment ) {

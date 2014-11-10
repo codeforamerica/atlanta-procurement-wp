@@ -20,21 +20,7 @@
   Last modified <?php the_modified_time('l, F j, Y'); ?> at <?php the_modified_time( 'g:i a T' ); ?>.
 </p>
 <p>
-  <?php $sol_status = get_field( 'solicitation_status' ); ?>
-
-  <?php if ( $sol_status == 'Under Evaluation' ) {
-          $sol_status_label = 'label-warning';
-        } else if ( $sol_status == 'Canceled' ) {
-          $sol_status_label = 'label-danger';
-        } else if ( $sol_status == 'Active' ) {
-          $sol_status_label = 'label-primary';
-        } else if ( $sol_status == 'Awarded' ) {
-          $sol_status_label = 'label-default';
-        } else if ( $sol_status == 'Open' ) {
-          $sol_status_label = 'label-success';
-        }
-  ?>
-  <label class="label <?php echo($sol_status_label); ?>"><?php the_field('solicitation_status') ?></label>
+  <label class="label <?php echo return_solicitation_label(get_field('solicitation_status')); ?>"><?php the_field('solicitation_status') ?></label>
 </p><br />
 
 <p>
