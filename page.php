@@ -26,7 +26,9 @@
               the_post();
               the_content();
 
-              get_template_part( 'solicitations-dropdown', get_post_format() );
+              if (is_page( 'Active Solicitations' ) || is_page('Archived Solicitations')):
+                get_template_part( 'solicitations-dropdown', get_post_format() );
+              endif;
             endwhile;
           endif;
         ?>
