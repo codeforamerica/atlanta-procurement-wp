@@ -73,7 +73,7 @@
    */
   function solicitation_default_title( $content, $post ) {
     if( $post->post_type == 'post' )
-      return 'FC-0000 Change this solicitation title (!!!)';
+      return 'FC-0000 Change This Solicitation Title (!!!)';
   }
 
   add_action( 'trashed_post', 'redirect_on_trash', 10, 1 );
