@@ -105,7 +105,7 @@
 
     if( $post->post_type == 'post' ) {
       $content = <<<EOT
-        <h2>Contracting Officer</h2>
+        <h2>Buyer/Compliance Officer</h2>
         <p>
           <span style="color: red;">Who is the contracting officer? Add their information here. For example:</span><br />
           Jane C. Officer (janeofficer@atlantaga.gov)<br />
@@ -117,7 +117,7 @@
         <p><span style="color: red;">Add a project summary to describe the new solicitation.</span</p>
         &nbsp;
 
-        <h2>Pre-bid Conference Date &amp; Location</h2>
+        <h2>Pre-Bid Conference Date &amp; Location</h2>
         <p>
           <span style="color: red;">When and where are the pre-bid conference?
           Example pre-bid conference text:</span><br />
@@ -135,7 +135,7 @@
         </p>
         &nbsp;
 
-        <h2>Bid/proposal Documents</h2>
+        <h2>Pre-Bid/Pre-Proposal Documents</h2>
         <p>
           <ul>
             <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14820" title="Web ad" target="_blank">Web ad</a></li>
