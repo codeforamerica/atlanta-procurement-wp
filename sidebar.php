@@ -26,3 +26,4 @@
 <a href="<?php echo site_url( '/procurement-code/' ); ?>">Procurement Code</a><br />
 <a href="<?php echo site_url( '/procurement-forms/' ); ?>">Procurement Forms</a><br />
 <a href="http://www.surveymonkey.com/r/ATLProcurement" target="_blank">Customer Service Survey</a><br />
+<a href="<?php echo site_url( '/compliance/' ); ?>">Compliance</a><br />
