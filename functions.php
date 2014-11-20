@@ -135,7 +135,7 @@
         </p>
         &nbsp;
 
-        <h2>Pre-Bid/Pre-Proposal Documents</h2>
+        <h2>Pre-Bid/Proposal Documents</h2>
         <p>
           <ul>
             <li><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=14820" title="Web ad" target="_blank">Web ad</a></li>
