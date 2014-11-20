@@ -31,6 +31,7 @@
 <?php the_content(); ?>
 
 <br /><br /><br />
+<!--
 <h2>Sign up for further updates on this opportunity</h2>
 <div class="form-group">
   <div class="row">
@@ -66,7 +67,9 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
 
 <br /><br />
 
