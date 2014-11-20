@@ -109,12 +109,15 @@
   <option value="all">All solicitations</option>
   <option value="citywide">Citywide</option>
   <option value="aviation">Aviation</option>
+  <option value="city-council">City Council</option>
   <option value="corrections">Corrections</option>
   <option value="finance">Finance</option>
-  <option value="fire">Fire</option>
+  <option value="fire">Fire Rescue</option>
   <option value="human-resources">Human Resources</option>
   <option value="info-tech">Information Technology</option>
+  <option value="judicial-agencies">Judicial Agencies</option>
   <option value="law">Law</option>
+  <option value="mayors-office">Mayor's Office</option>
   <option value="parks-rec">Parks &amp; Recreation</option>
   <option value="planning-comm-dev">Planning &amp; Community Development</option>
   <option value="procurement">Procurement</option>
