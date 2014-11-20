@@ -20,6 +20,7 @@
           endif;
 
           get_template_part( 'latest-solicitations', get_post_format() );
+          get_template_part( 'beta-banner', get_post_format() );
 
           if(have_posts()) :
             while(have_posts()) :
