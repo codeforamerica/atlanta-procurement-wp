@@ -59,6 +59,7 @@
           for(var j = 0; j < solicitations[i].categories.length; j++) {
             console.log(solicitations[i]);
             if(solicitations[i].categories[j].slug == "commodities") {
+              console.log()
               commodity_sols.push(solicitations[i]);
             } else if(solicitations[i].categories[j].slug == "services") {
               service_sols.push(solicitations[i]);
@@ -97,7 +98,8 @@
         if( $('#project-solicitations option').length > 1 ) {
           $('#project-solicitations,#solicitation-label,#choose-solicitations').fadeIn();
           $('#no-active-solicitations').fadeOut();
-        } else { no_data(); }
+        } else { $('#project-solicitations,#solicitation-label,#choose-solicitations').fadeIn();
+        $('#no-active-solicitations').fadeOut(); }
       }
     });
   });
