@@ -31,6 +31,7 @@
   add_filter( 'media_send_to_editor', 'include_upload_date', 10, 3 );
 
   function include_upload_date( $html, $id, $attachment ) {
+    date_default_timezone_set( 'America/New_York' );
     $post_description = "  (Added: " . date("m/d/Y @ g:i a T") . ")";
     return $html . $post_description;
   }
