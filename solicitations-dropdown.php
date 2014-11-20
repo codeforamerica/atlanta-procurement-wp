@@ -69,11 +69,13 @@
 
         $('#project-solicitations').empty().append($('<option></option>').attr("value", "blank"));
 
-        var _solicitations;
+        var _solicitations, _p_val;
 
-        if($(this).val() == 'services') {
+        _p_val = $(this).val();
+
+        if(_p_val == 'services') {
           _solicitations = service_sols;
-        } else if($(this).val() == 'commodities') {
+        } else if(_p_val == 'commodities') {
           _solicitations = commodity_sols;
         }
 
