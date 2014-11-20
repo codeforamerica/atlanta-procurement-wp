@@ -29,7 +29,7 @@
           <li>Atlanta, GA 30303</li>
           <li><strong>Phone:</strong> 404.330.6204</li>
           <li><strong>Fax:</strong> 404.658.7705</li>
-          <li>Mon-Fri, 9am - 5pm EST</li>
+          <li>Mon-Fri, 8:15am - 5pm EST</li>
         </ul>
         <ul class="social-media-list">
           <li>
