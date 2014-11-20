@@ -57,6 +57,7 @@
       if(solicitations.length > 0) {
         for(var i = 0; i < solicitations.length; i++) {
           for(var j = 0; j < solicitations[i].categories.length; j++) {
+            console.log(solicitations[i]);
             if(solicitations[i].categories[j].slug == "commodities") {
               commodity_sols.push(solicitations[i]);
             } else if(solicitations[i].categories[j].slug == "services") {
