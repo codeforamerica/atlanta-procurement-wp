@@ -106,9 +106,9 @@
 
     if( $post->post_type == 'post' ) {
       $content = <<<EOT
-        <h2>Buyer/Compliance Officer</h2>
+        <h2>Buyer/Contracting Officer</h2>
         <p>
-          <span style="color: red;">Who is the buyer/compliance officer? Add their information here. For example:</span><br />
+          <span style="color: red;">Who is the buyer/contracting officer? Add their information here. For example:</span><br />
           Jane C. Officer (janeofficer@atlantaga.gov)<br />
           404.330.6517
         </p>
