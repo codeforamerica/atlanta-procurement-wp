@@ -1,3 +1,4 @@
+<?php if(get_post_type() == 'post') : ?>
 <p>
   <h3><strong><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></strong>
   </h3>
@@ -12,3 +13,4 @@
 </p>
 <?php the_excerpt(); ?>
 <div style="border-bottom: 1px solid #ccc; margin-top: 25px;">&nbsp;</div>
+<?php endif; ?>
