@@ -5,11 +5,7 @@
       <?php get_sidebar(); ?>
     </div>
     <div style="float: right; width: 600px; text-align: left;">
-      <script src="//platform.linkedin.com/in.js" type="text/javascript">
-      /* <![CDATA[ */
-        lang: en_US
-      /* ]]> */
-      </script>
+      <?php get_template_part( 'linkedin-share', get_post_format() ); ?>
 
       <!-- THIS IS WHERE THE WORDPRESS CODE TO INCLUDE CONTENT GOES...! -->
       <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); ?>
