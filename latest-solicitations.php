@@ -1,5 +1,5 @@
 <?php
-  if ( is_page( 'Home' ) ) { ?>
+  if ( is_page( 'Home' ) || is_search() ) { ?>
     <div class="alert alert-info">
       <h3>Latest opportunities from the last 7 days</h3>
       <ul>
