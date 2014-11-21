@@ -12,5 +12,6 @@
   Bids/Proposals Due <?php echo DateTime::createFromFormat('m/d/y g:i a', get_field('bids_due'))->format('l, F j, Y \a\t g:i a'); ?>
 </p>
 <?php the_excerpt(); ?>
+<a style="color: #fff; text-decoration: none" class="btn btn-success">Get more information</a>
 <div style="border-bottom: 1px solid #ccc; margin-top: 25px;">&nbsp;</div>
 <?php endif; ?>
