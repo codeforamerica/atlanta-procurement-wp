@@ -33,7 +33,7 @@
 
           if(have_posts()) :
             while(have_posts()) :
-              the_title();
+              if(strcmp(get_the_title(), 'Search') != 0) : the_title(); endif;
               the_post();
               the_content();
             endwhile;
