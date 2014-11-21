@@ -5,7 +5,7 @@
     first impressions of this new site using the Feedback tab on the left of this window.</em>
   </p>
   <p>
-    <em>Please continue to visit <a href="www.atlantaga.gov/procurement">www.atlantaga.gov/procurement</a> to browse
+    <em>Please continue to visit <a href="http://www.atlantaga.gov/procurement">www.atlantaga.gov/procurement</a> to browse
     current procurement opportunities at the City of Atlanta.</em>
   </p>
   <p>
