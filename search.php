@@ -33,9 +33,14 @@
 
           if(have_posts()) :
             while(have_posts()) :
-              if(strcmp(get_the_title(), 'Search') != 0) : the_title(); endif;
-              the_post();
-              the_content();
+              if(!is_search()):
+                the_post();
+                the_content();
+                //get_template_part( 'edit_content', get_post_format() );
+              elseif(is_search()):
+                the_post();
+                get_template_part( 'solicitations-content', get_post_format() );
+              endif;
             endwhile;
           else:
             get_template_part ( 'no-search-results', get_post_format() );
