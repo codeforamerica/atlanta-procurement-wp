@@ -87,7 +87,7 @@
               $('#project-solicitations')
                 .append($('<option></option>')
                   .attr("value", solicitation.id)
-                  .text(solicitation.title)
+                  .html(solicitation.title)
                 );
             }
           }
